@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    width: 800px;
+    height: 470px;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div1, .div2, .div3, .div4 {
+    height: 100%;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    position: absolute;
+    top: 0;
+}
+
+.div1, .div3 {
+    left: 0;
+}
+
+.div2, .div4 {
+    right: 0;
+}
+
+.div1, .div4 {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.div2, .div3 {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateX(100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.div3, .div4 {
+    background-color: rgb(255, 0, 0);
+    background-clip: padding-box;
+}
+
+.div4 h1, .div4 p, .div4 button, .div3 h1, .div3 p, .div3 button {
+    margin: 10px 0;
+    color: white;
+}
+
+i {
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin: 10px 10px;
+    padding: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input {
+    outline: none;
+    border: none;
+    width: 300px;
+    height: 35px;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(209, 206, 206);
+}
+
+button {
+    width: 140px;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(255, 0, 0);
+    border: 1px solid white;
+    color: white;
+    box-sizing: initial;
+}
+
+a {
+    color: black;
+    cursor: pointer;
+}
+
